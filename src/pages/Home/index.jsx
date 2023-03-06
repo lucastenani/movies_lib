@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const moviesURl = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
