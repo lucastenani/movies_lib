@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import "./App.css";
 
 export default function App() {
@@ -12,6 +12,8 @@ export default function App() {
         <Link to="/movie/1">Movie</Link>
         <Link to="/search">Search</Link>
       </nav>
+
+      <Outlet />
     </div>
   );
 }
