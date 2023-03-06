@@ -20,8 +20,19 @@ const Home = () => {
   }, []);
 
   return (
-    <div>{topMovies && topMovies.map((movie) => <p>{movie.title}</p>)}</div>
+    <div className="container">
+      <h2 className="title">Best movies:</h2>
+      <div className="moviesContainer">
+        <div>
+          {topMovies.length === 0 && <p>Loading...</p>}
+          {topMovies.length > 0 &&
+            topMovies.map((movie) => <p>{movie.title}</p>)}
+        </div>
+      </div>
+    </div>
   );
 };
 
 export default Home;
+
+//
