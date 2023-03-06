@@ -1,9 +1,17 @@
+import { Link } from "react-router-dom";
 import "./App.css";
 
 export default function App() {
   return (
     <div className="App">
-      <h2>Movies Lib</h2>
+      <nav id="navbar">
+        <h2>
+          <Link to="/">MoviesLib</Link>
+        </h2>
+
+        <Link to="/movie/1">Movie</Link>
+        <Link to="/search">Search</Link>
+      </nav>
     </div>
   );
 }
