@@ -1,7 +1,9 @@
 import { useSearchParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import MovieCard from "../../components/MovieCard";
+
 import "./style.scss";
+import NoResult from "../../components/NoResult";
 
 const searchUrl = import.meta.env.VITE_SEARCH;
 const apiKey = import.meta.env.VITE_API_KEY;
@@ -32,9 +34,11 @@ const Search = () => {
         Results for: <span className="query-text">{query}</span>
       </h2>
       <div className="movies-container">
-        {movies.length === 0 && <p>Loading...</p>}
-        {movies.length > 0 &&
-          movies.map((movie) => <MovieCard key={movie.id} movie={movie} />)}
+        {movies.length > 0 ? (
+          movies.map((movie) => <MovieCard key={movie.id} movie={movie} />)
+        ) : (
+          <NoResult />
+        )}
       </div>
     </div>
   );
