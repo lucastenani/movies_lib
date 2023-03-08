@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route element={<App />} basename="/movies_lib">
+        <Route element={<App />}>
           <Route exact path="/" element={<Home />} />
           <Route exact path="movie/:id" element={<Movie />} />
           <Route exact path="search" element={<Search />} />
