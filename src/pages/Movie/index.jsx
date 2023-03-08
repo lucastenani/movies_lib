@@ -39,30 +39,34 @@ const Movie = () => {
       {movie && (
         <>
           <MovieCard movie={movie} showLink={false} />
-          <p className="tagline">{movie.tagline}</p>
-          <div className="info">
-            <h3>
-              <BsWallet2 /> Budget:
-            </h3>
-            <p>{formatCurrency(movie.budget)}</p>
-          </div>
-          <div className="info">
-            <h3>
-              <BsGraphUp /> Revenue:
-            </h3>
-            <p>{formatCurrency(movie.revenue)}</p>
-          </div>
-          <div className="info">
-            <h3>
-              <BsHourglassSplit /> Duration:
-            </h3>
-            <p>{movie.runtime} minutes</p>
-          </div>
-          <div className="info description">
-            <h3>
-              <BsFillFileEarmarkTextFill /> Description:
-            </h3>
-            <p>{movie.overview}</p>
+          <div className="movieContainer">
+            <p className="tagline">{movie.tagline}</p>
+            <div className="movieDetails">
+              <div className="info">
+                <h3>
+                  <BsWallet2 /> Budget:
+                </h3>
+                <p>{formatCurrency(movie.budget)}</p>
+              </div>
+              <div className="info">
+                <h3>
+                  <BsGraphUp /> Revenue:
+                </h3>
+                <p>{formatCurrency(movie.revenue)}</p>
+              </div>
+              <div className="info">
+                <h3>
+                  <BsHourglassSplit /> Duration:
+                </h3>
+                <p>{movie.runtime} minutes</p>
+              </div>
+            </div>
+            <div className="info description">
+              <h3>
+                <BsFillFileEarmarkTextFill /> Description:
+              </h3>
+              <p>{movie.overview}</p>
+            </div>
           </div>
         </>
       )}

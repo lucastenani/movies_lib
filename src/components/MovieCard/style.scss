@@ -8,9 +8,19 @@
   background-color: #111;
   padding: 1rem;
   gap: 1rem;
+  border-radius: 12px;
+
+  @media (max-width: 770px) {
+    width: 48%;
+  }
+
+  @media (max-width: 500px) {
+    width: 100%;
+  }
 
   img {
     max-width: 100%;
+    border-radius: 12px;
   }
 
   svg {
