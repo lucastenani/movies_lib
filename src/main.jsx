@@ -12,9 +12,9 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     <BrowserRouter>
       <Routes>
         <Route element={<App />} basename="/movies_lib">
-          <Route path="/" element={<Home />} />
-          <Route path="movie/:id" element={<Movie />} />
-          <Route path="search" element={<Search />} />
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="movie/:id" element={<Movie />} />
+          <Route exact path="search" element={<Search />} />
         </Route>
       </Routes>
     </BrowserRouter>
