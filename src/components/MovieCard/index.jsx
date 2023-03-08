@@ -1,5 +1,6 @@
 import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import "./style.scss";
 
 const imageUrl = import.meta.env.VITE_IMG;
 const imageNotFound =
