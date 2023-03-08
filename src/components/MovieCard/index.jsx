@@ -2,12 +2,14 @@ import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const imageUrl = import.meta.env.VITE_IMG;
+const imageNotFound =
+  "https://dummyimage.com/284 x 426/000/fff.jpg&text=image+not+found";
 
 const MovieCard = ({ movie, showLink = true }) => {
   return (
     <div className="movie-card">
       <img
-        src={imageUrl + movie.poster_path}
+        src={movie.poster_path ? imageUrl + movie.poster_path : imageNotFound}
         alt={`${movie.title}  movie image`}
       />
 
